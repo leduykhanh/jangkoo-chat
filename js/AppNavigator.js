@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 const reducerCreate = params => {
   const defaultReducer = new Reducer(params);
   return (state, action) => {
-    console.log('ACTION:', action);
+    // console.log('ACTION:', action);
     return defaultReducer(state, action);
   };
 };
@@ -53,9 +53,9 @@ const getSceneStyle = () => ({
   shadowRadius: 3,
 });
 
-const Example = () => {
+const Routes = () => {
   return (
-    <Router createReducer={reducerCreate} tintColor='red' getSceneStyle={getSceneStyle}>
+    <Router createReducer={reducerCreate}  getSceneStyle={getSceneStyle}>
       <Scene overlay>
         <Scene key="messageBar" component={MessageBar} />
         <Scene key="lightbox" lightbox leftButtonTextStyle={{color: 'green'}} backButtonTextStyle={{color: 'red'}} initial>
@@ -122,7 +122,7 @@ const Example = () => {
                 </Scene>
               </Scene>
             </Scene>
-            <Scene key="chat" component={Chat} />
+            <Scene key="chat" back component={Chat} />
             <Scene key="login">
               <Scene key="loginModal" component={Login} title="Login" leftTitle="Cancel" onLeft={Actions.pop}/>
               <Scene
@@ -150,4 +150,4 @@ const Example = () => {
   );
 }
 
-export default Example;
+export default Routes;

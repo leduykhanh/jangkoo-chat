@@ -1,5 +1,5 @@
 import { AppRegistry } from 'react-native';
 
-import Example from './js/Example';
+import setup from './js/setup';
 
-AppRegistry.registerComponent('Example', () => Example);
+AppRegistry.registerComponent('JangkooUniversal', setup);
