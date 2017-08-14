@@ -24,6 +24,8 @@ import TabView from './components/TabView';
 import TabIcon from './components/TabIcon';
 import EchoView from './components/EchoView';
 import Chat from './components/Chat';
+import Camera from './components/Camera';
+import AppList from './components/AppList';
 import Button from 'react-native-button';
 import MessageBar from './components/MessageBar';
 
@@ -122,7 +124,11 @@ const Routes = () => {
                 </Scene>
               </Scene>
             </Scene>
-            <Scene key="chat" back component={Chat} />
+            <Scene key="app" back>
+              <Scene key="appList" title="App List" component={AppList} />
+              <Scene key="chat" title="Messaging" component={Chat} />
+              <Scene key="camera" title="Camera" component={Camera} />
+            </Scene>
             <Scene key="login">
               <Scene key="loginModal" component={Login} title="Login" leftTitle="Cancel" onLeft={Actions.pop}/>
               <Scene

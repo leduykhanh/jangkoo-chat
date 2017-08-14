@@ -15,14 +15,14 @@ const styles = StyleSheet.create({
   }
 });
 
-class Launch extends React.Component {
+class AppList extends React.Component {
   render(){
-    console.log("Launch RENDER");
+
     return (
       <View {...this.props}  style={styles.container}>
         <Text>Launch page</Text>
-        <Button onPress={()=>Actions.app()}>Apps</Button>
-        <Button onPress={()=>Actions.login({data:"Custom data", title:"Custom title" })}>Go to Login page</Button>
+        <Button onPress={()=>Actions.chat()}>Chat</Button>
+        <Button onPress={()=>Actions.camera({data:"Custom data", title:"Custom title" })}>Camera</Button>
         <Button onPress={()=>Actions.register()}>Go to Register page</Button>
         <Button onPress={()=>Actions.error("Error message")}>Popup error</Button>
         <Button onPress={()=>MessageBarManager.showAlert({
@@ -39,4 +39,4 @@ class Launch extends React.Component {
   }
 }
 
-module.exports = Launch;
+export default AppList;
