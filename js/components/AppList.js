@@ -22,6 +22,7 @@ class AppList extends React.Component {
       <View {...this.props}  style={styles.container}>
         <Text>Launch page</Text>
         <Button onPress={()=>Actions.chat()}>Chat</Button>
+        <Button onPress={()=>Actions.streaming()}>Streaming</Button>
         <Button onPress={()=>Actions.camera({data:"Custom data", title:"Custom title" })}>Camera</Button>
         <Button onPress={()=>Actions.register()}>Go to Register page</Button>
         <Button onPress={()=>Actions.error("Error message")}>Popup error</Button>
