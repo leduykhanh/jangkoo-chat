@@ -29,6 +29,7 @@ import AppList from './components/AppList';
 import Button from 'react-native-button';
 import MessageBar from './components/MessageBar';
 import StreamingComponent from './components/StreamingComponent';
+import PlayerComponent from './components/PlayerComponent';
 
 const styles = StyleSheet.create({
   container: {
@@ -130,6 +131,7 @@ const Routes = () => {
               <Scene key="chat" title="Messaging" component={Chat} />
               <Scene key="camera" title="Camera" component={Camera} />
               <Scene key="streaming" title="Streaming" component={StreamingComponent} />
+              <Scene key="playing" title="playing" component={PlayerComponent} />
             </Scene>
             <Scene key="login">
               <Scene key="loginModal" component={Login} title="Login" leftTitle="Cancel" onLeft={Actions.pop}/>

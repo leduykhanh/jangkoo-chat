@@ -3,6 +3,7 @@ import {View, Text, StyleSheet} from "react-native";
 import Button from "react-native-button";
 import {Actions} from "react-native-router-flux";
 import { MessageBarAlert, MessageBarManager } from 'react-native-message-bar';
+import SplashScreen from 'react-native-splash-screen';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,6 +17,10 @@ const styles = StyleSheet.create({
 });
 
 class Launch extends React.Component {
+  componentDidMount(){
+    SplashScreen.show();
+    setTimeout(function(){ SplashScreen.hide(); }, 1000);
+  }
   render(){
     console.log("Launch RENDER");
     return (

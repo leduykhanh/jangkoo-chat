@@ -3,6 +3,7 @@ package com.jangkoo;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
 import com.pili.rnpili.PiliPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.evollu.react.fcm.FIRMessagingPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new SplashScreenReactPackage(),
             new PiliPackage(),
             new RCTCameraPackage(),
             new FIRMessagingPackage()
